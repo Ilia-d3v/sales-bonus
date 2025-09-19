@@ -70,7 +70,7 @@ function analyzeSalesData(data, options) {
     // Кол-во продаж + выручка по чеку
     seller.sales_count += 1;
 
-    const receiptRevenue = (record.total_amount || 0) - (record.total_discount || 0);
+    const receiptRevenue = record.total_amount || 0;
     seller.revenue += receiptRevenue;
 
     record.items.forEach((item) => {
